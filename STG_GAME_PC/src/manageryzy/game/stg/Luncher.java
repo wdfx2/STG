@@ -3,7 +3,9 @@ package manageryzy.game.stg;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import manageryzy.stg.engine.GameMain.StgGameMain;
 import manageryzy.stg.engine.hal.StgHal;
+import manageryzy.stg.engine.*;
 
 public class Luncher {
 
@@ -16,11 +18,12 @@ public class Luncher {
 		Logger.getGlobal().log(Level.INFO, "luncher start");
 		StgHal.theStgHal=new StgHal("STG.db");
 //		StgHal.theStgHal.SoundEffect.LoadSound("Sound1", "se_powerup.wav");
-//		StgHal.theStgHal.BGMEngine.addMusic("Music1", "´ºÉ«Ð¡¾¶ ¡« Colorful Path.wav", 0, 0);
-//		StgHal.theStgHal.BGMEngine.addMusic("Music2", "¾¿˜O¤ÎÕæŒg¡¡¡« the Ultimate Truth.wav", 0, 0);
+//		StgHal.theStgHal.BGMEngine.addMusic("Music1", "ï¿½ï¿½É«Ð¡ï¿½ï¿½ ï¿½ï¿½ Colorful Path.wav", 0, 0);
+//		StgHal.theStgHal.BGMEngine.addMusic("Music2", "ï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ the Ultimate Truth.wav", 0, 0);
 //		StgHal.theStgHal.SoundEffect.PlaySound("Sound1");
 //		StgHal.theStgHal.BGMEngine.PlayAtOnce("Music1");
-		StgHal.theStgHal.initWindow("STG game");
+//		StgHal.theStgHal.initWindow("STG game");
+		StgGameMain.GameMainThread();
 		Logger.getGlobal().log(Level.INFO, "luncher exit");
 		
 	}
